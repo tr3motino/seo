@@ -363,7 +363,7 @@ export default class FocusKeywords {
 		if (e.target.value.trim() !== "") {
 			this.onInputKeyDown({
 				target: e.target,
-				keyCode: 39,
+				keyCode: 17,
 				preventDefault: () => {},
 			});
 		}
@@ -375,7 +375,7 @@ export default class FocusKeywords {
 	 * @param {Event} e
 	 */
 	onInputKeyDown = e => {
-		if (e.keyCode !== 39 || e.key !== 'ArrowRight') return;
+		if (e.keyCode !== 17 || e.key !== 'Ctrl') return;
 		e.preventDefault();
 		
 		const nextKeyword = e.target.value.trim();
